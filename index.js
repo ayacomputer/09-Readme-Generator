@@ -82,7 +82,14 @@ Let's create your README.md file!
 Italic text: *This text will be italic* 
 Bold text: **This text will be bold**
 Links: [text](https://website.com)
-Image or Animation: ![This is a alt text.](/image.png)
+* [Next.js](https://nextjs.org/)
+* [React.js](https://reactjs.org/)
+* [Vue.js](https://vuejs.org/)
+* [Angular](https://angular.io/)
+* [Node.js](https://nodejs.org/)
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+Image or Animation: ![This is an image of the product.](./assets/product.png)
 Highlight: ==very important words==
 -------------------------------------------------------------
 Please answer the questions bellow:
