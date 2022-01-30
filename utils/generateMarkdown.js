@@ -53,7 +53,7 @@ const generateMarkdown = (data) => {
   readmeContents += tableOfContents;
 
   readmeContents += `\n ## About The Project\n
-\n [![ProductScreen Shot][product - screenshot]](./assets/screenshot/product.png)\n
+\n ![ProductScreen Shot](./assets/product.png)\n
 \n${data.description}
 \n<p align = "right">(<a href="#top">back to top</a>)</>\n`
 
@@ -76,7 +76,7 @@ const generateMarkdown = (data) => {
 
   if (data.usage) {
     readmeContents += `\n## Usage
-\n Following animation and images show this application's functionality.
+\n  Following image shows show this application's functionality.
 \n${data.usage}
 \n<p align ="right">(<a href="#top">back to top</a>)</>\n`
   }

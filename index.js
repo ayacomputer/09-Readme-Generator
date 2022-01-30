@@ -103,7 +103,11 @@ const init = () => {
         .then((answers) => {
             fs.writeFileSync('README.md', generateMarkdown(answers))
         })
-        .then(() => console.log('Your README file is successfully created.'))
+        .then(() => {
+            console.log(`\n-------------------------------------\n`);
+            console.log('Your README file is successfully created.');
+            console.log(`\n-------------------------------------\n`);
+        })
         .catch((err) => console.error(err));
 }
 

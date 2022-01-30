@@ -3,7 +3,7 @@
 
 ---
   
-#  Readme Generator
+# Readme Generator
 <details>
   
 <summary>Table of Contents</summary>
@@ -47,23 +47,23 @@
  ## About The Project
 
 
- [![ProductScreen Shot][product - screenshot]](./assets/screenshot/product.png)
+ ![ProductScreen Shot](./assets/product.png)
 
 
- This application allows the users to create a nice looking README.md file by answering simple questions.
+This application allows the users to create an awesome README.md file by answering simple questions.
 
 <p align = "right">(<a href="#top">back to top</a>)</>
 
  ## Built With
-* [Node.js](https://nodejs.org/)  
-*  [NPM Inquirer](https://www.npmjs.com/package/inquirer)  
+* [Node.js](https://nodejs.org/) 
+* npm inquirer 
 <p align = "right"> (<a href="#top">back to top</a>)</>
 
 ## Usage
 
- Following animation and images show this application's functionality.
+  Following image shows show this application's functionality.
 
-![This is an image of the product.](./assets/product.png)
+ ![This is an image of the product.](./assets/product.png)
 
 <p align ="right">(<a href="#top">back to top</a>)</>
 
@@ -71,9 +71,9 @@
 
 To get a local copy up and running follow these simple example steps.
 
- ## Installation
+ ## Installation~
 
- Clone this repo to your local repo `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
+ `git clone git@`
 
 <p align="right">(<a href="#top">back to top</a>)</>
 
