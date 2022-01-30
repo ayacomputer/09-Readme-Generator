@@ -1,7 +1,7 @@
 // Including packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const gm = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Creating an array of questions for user input
 const questions = [
@@ -42,7 +42,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'How do you installation this application?',
+        message: 'How do you install this application?',
         name: 'installation',
     },
     {
@@ -70,15 +70,17 @@ const questions = [
 ];
 
 // Creating functions to write README file
-const markDownExample = `
-Let's create your READme.md file!
+const markDownExample = `\n
+Let's create your README.md file!
 
----Mark Down examples--
-*This text will be italic* 
-**This text will be bold**
+----------------------Mark Down examples---------------------
+Italic text: *This text will be italic* 
+Bold text: **This text will be bold**
 Links: [text](https://website.com)
-Image: ![This is a alt text.](/image/sample.png)
-------------------------
+Image or Animation: ![This is a alt text.](/image.png)
+Highlight: ==very important words==
+-------------------------------------------------------------
+Please answer the questions bellow:
 `
 const promptUser = () => inquirer.prompt(questions);
 
@@ -87,12 +89,12 @@ const promptUser = () => inquirer.prompt(questions);
 const init = () => {
     promptUser()
         .then((answers) => {
-            console.log(markDownExample);
-            fs.writeFileSync('README.md', gm.generateMarkdown(answers))
+            fs.writeFileSync('README.md', generateMarkdown(answers))
         })
         .then(() => console.log('Your README file is successfully created.'))
         .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
+console.log(markDownExample);
 init();
