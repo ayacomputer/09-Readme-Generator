@@ -1,6 +1,7 @@
 // Including packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Creating an array of questions for user input
 const questions = [
@@ -26,8 +27,18 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What technologies(languages) did you use to build this application?',
-        name: 'technologies',
+        message: 'What is the first technology did you use to build this application?',
+        name: 'technology1',
+    },
+    {
+        type: 'input',
+        message: 'What is the second technology did you use to build this application?',
+        name: 'technology2',
+    },
+    {
+        type: 'input',
+        message: 'What is the third technology did you use to build this application?',
+        name: 'technology3',
     },
     {
         type: 'input',
@@ -43,7 +54,7 @@ const questions = [
         type: 'list',
         message: 'Please pick a license.',
         name: 'license',
-        choices: ['MIT', 'Apache', 'GPL'],
+        choices: ['MIT', 'Apache License 2.0', 'GNU General Public License 2.0', 'GNU General Public License 3.0'],
     },
     {
         type: 'input',
@@ -60,8 +71,9 @@ const questions = [
 
 // Creating functions to write README file
 const promptUser = () => inquirer.prompt(questions);
-const generateREADME = ({ projectName, description, installation, usage, license, gitHubName, email }) => {
-    `<!-- TABLE OF CONTENTS -->
+const generateREADME = ({ userName, projectName, description, installation, technology1, technology2, technology3, usage, license, gitHubName, email, repoName }) =>
+    `
+    #${projectName}
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -74,16 +86,12 @@ const generateREADME = ({ projectName, description, installation, usage, license
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -102,64 +110,41 @@ ${description}
 
 ### Built With
 
-* ${technology}
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* ${technology1}
+* ${technology2}
+* ${technology3}
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-
-
+  
 ### Installation
+${installation}
 
-
-// Prep. Get a free API Key at [https://example.com](https://example.com)
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-    ```
-2. Install NPM packages
-   ```sh
-   npm install
-        ```
-3. Enter your API in `config.js`
-   ```js
-    const API_KEY = 'ENTER YOUR API';
-    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- USAGE -->
 ## Usage
+${usage}
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Following animation and images show this application's functionality.
+[![Product Screen Shot][product-screenshot]](./assets/screenshot/product.gif)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
 ## License
 
-Distributed under ${license} License. See `LICENSE.txt` for more information.
+Distributed under ${license} License. See 'LICENSE.txt' for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- CONTACT -->
 ## Contact Me
 
 ${userName} - ${email}
@@ -167,8 +152,7 @@ ${userName} - ${email}
 Project Link: [https://github.com/${gitHubName}/${repoName}](https://github.com/${gitHubName}/${repoName})
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-`
-}
+`;
 
 // Creating a function to initialize app
 const init = () => {
