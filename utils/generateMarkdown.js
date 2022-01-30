@@ -5,11 +5,14 @@ const generateMarkdown = (data) => {
     case 'MIT':
       licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
       break;
-    case 'Apache License 2.0': `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    case 'Apache License 2.0':
+      licenseBadge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
       break;
-    case 'GNU General Public License 2.0': `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+    case 'GNU General Public License 2.0':
+      licenseBadge = `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
       break;
-    case 'GNU General Public License 3.0': `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+    case 'GNU General Public License 3.0':
+      licenseBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
       break;
   }
 
@@ -33,11 +36,14 @@ const generateMarkdown = (data) => {
     \n<li><a href="#installation">Installation</a></li>
     \n</ul>
     \n</li>`}
+
   if (data.usage) {
-    tableOfContents += `\n<li><a href="#usage">Usage</a></li>`
+    tableOfContents += `
+    \n<li><a href="#usage">Usage</a></li>`
   }
 
-  tableOfContents += `\n<li><a href="#license">License</a></li>
+  tableOfContents += `
+  \n<li><a href="#license">License</a></li>
   \n<li><a href="#contact">Contact</a></li>
   \n</ol >
   \n</details >`
@@ -56,22 +62,23 @@ const generateMarkdown = (data) => {
   \n ## Built With`
 
   if (data.technology1) {
-    readmeContents += `\n* ${data.technology1}`
+    readmeContents += `\n * ${data.technology1}`
   }
   if (data.technology2) {
-    readmeContents += `\n* ${data.technology2}`
+    readmeContents += `\n * ${data.technology2}`
   }
   if (data.technology3) {
-    readmeContents += `*\n ${data.technology3}`
+    readmeContents += `\n * ${data.technology3}`
   }
   if (data.technology4) {
-    readmeContents += `*\n ${data.technology4}`
+    readmeContents += `\n * ${data.technology4}`
   }
 
   readmeContents += `\n<p align="right">(<a href="#top">back to top</a>)</p>`
 
   if (data.installation) {
-    readmeContents += `\n## Getting Started
+    readmeContents += `
+  \n## Getting Started
   \nTo get a local copy up and running follow these simple example steps.
   \n ## Installation
   \n ${data.installation}
