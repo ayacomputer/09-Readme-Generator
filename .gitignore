@@ -22,7 +22,8 @@ node_modules/
 creds.js
  
 # Private Files
-*.json
+# *.json
+* package-lock.json
 *.csv
 *.csv.gz
 *.tsv
