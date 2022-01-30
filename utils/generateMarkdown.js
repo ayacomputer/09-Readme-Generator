@@ -24,23 +24,25 @@ const generateMarkdown = (data) => {
   \n<summary>Table of Contents</summary>\n
   \n<ol>
   \n<li>
-  \n<a href="#about-the-project">About The Project</a></>\n
+  \n<a href="#about-the-project">About The Project</a></li>\n
   \n<ul>
-  \n<li>< href="#built-with">Built With</a></>\n
-  \n</ul>
-  \n</li>`
-
-  if (data.installation) {
-    tableOfContents += `\n<li>
-\n<a href="#getting-started"> Getting Started</a></>
-\n<ul>
-\n<li><a href="#installation">Installation</a>< />
-\n</ul>
-\n</li>`}
+  \n<li><a href="#built-with">Built With</a></li>\n`
 
   if (data.usage) {
     tableOfContents += `\n<li><a href="#usage">Usage</a></>`
   }
+
+  if (data.installation) {
+    tableOfContents += `\n</ul>
+\n</li>
+\n<li>
+\n<a href="#getting-started">Getting Started</a>
+\n<ul>
+\n<li><a href="#installation">Installation</a>
+\n</ul>
+\n</li>`}
+
+
 
   tableOfContents += `\n<li><a href="#license">License</a></>
   \n<li><a href="#contact">Contact</a></>
@@ -70,16 +72,7 @@ const generateMarkdown = (data) => {
   if (data.technology4) {
     readmeContents += `\n* ${data.technology4} `
   }
-
   readmeContents += `\n<p align = "right"> (<a href="#top">back to top</a>)</>\n`
-
-  if (data.installation) {
-    readmeContents += `\n## Getting Started
-\nTo get a local copy up and running follow these simple example steps.
-\n ## Installation
-\n ${data.installation}
-\n<p align="right">(<a href="#top">back to top</a>)</>\n`
-  }
 
   if (data.usage) {
     readmeContents += `\n## Usage
@@ -87,6 +80,18 @@ const generateMarkdown = (data) => {
 \n${data.usage}
 \n<p align ="right">(<a href="#top">back to top</a>)</>\n`
   }
+
+
+
+  if (data.installation) {
+    readmeContents += `\n## Getting Started
+\nTo get a local copy up and running follow these simple example steps.
+\n ## Installation~
+\n ${data.installation}
+\n<p align="right">(<a href="#top">back to top</a>)</>\n`
+  }
+
+
 
 
   readmeContents += `\n## License

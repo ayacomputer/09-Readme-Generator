@@ -3,36 +3,39 @@
 
 ---
   
-# Readme Generator
+#  Readme Generator
 <details>
   
 <summary>Table of Contents</summary>
+
   
 <ol>
   
 <li>
   
-<a href="#about-the-project">About The Project</>
+<a href="#about-the-project">About The Project</a></li>
+
   
 <ul>
   
-<li><a href="#built-with">Built With</a></>
-  
+<li><a href="#built-with">Built With</a></li>
+
+<li><a href="#usage">Usage</a></>
 </ul>
-  
+
 </li>
+
 <li>
 
-<a href="#getting-started"> Getting Started</>
+<a href="#getting-started">Getting Started</a>
 
 <ul>
 
-<li><a href="#installation">Installation</a></>
+<li><a href="#installation">Installation</a>
 
 </ul>
 
-</li> 
-<li><a href="#usage">Usage</a></>
+</li>
 <li><a href="#license">License</a></>
   
 <li><a href="#contact">Contact</a></>
@@ -40,20 +43,29 @@
 </ol>
   
 </details>
+
  ## About The Project
 
 
  [![ProductScreen Shot][product - screenshot]](./assets/screenshot/product.png)
 
 
-This application allows the users to create a nice looking README.md file by answering simple questions. 
+ This application allows the users to create a nice looking README.md file by answering simple questions.
 
-<p align = "right"> (<a href="#top">back to top</a>)</>
+<p align = "right">(<a href="#top">back to top</a>)</>
 
  ## Built With
-* [Node.js](https://nodejs.org/) 
-* [npm inquirer](https://www.npmjs.com/package/inquirer) 
+* [Node.js](https://nodejs.org/)  
+*  [NPM Inquirer](https://www.npmjs.com/package/inquirer)  
 <p align = "right"> (<a href="#top">back to top</a>)</>
+
+## Usage
+
+ Following animation and images show this application's functionality.
+
+![This is an image of the product.](./assets/product.png)
+
+<p align ="right">(<a href="#top">back to top</a>)</>
 
 ## Getting Started
 
@@ -61,17 +73,9 @@ To get a local copy up and running follow these simple example steps.
 
  ## Installation
 
- Clone this repo to your local repo \n`git clone git@github.com:ayacomputer/09-Readme-Generator.git`
+ Clone this repo to your local repo `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
 
 <p align="right">(<a href="#top">back to top</a>)</>
-
-## Usage
-
- Following animation and images show this application's functionality.
-
- ![This is an image of the product.](./assets/product.png)
-
-<p align ="right">(<a href="#top">back to top</a>)</>
 
 ## License
 
