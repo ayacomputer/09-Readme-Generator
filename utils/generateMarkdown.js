@@ -13,86 +13,96 @@ const generateMarkdown = (data) => {
       break;
   }
 
-  `#${projectName}
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
+  let readmeContents = `
+  # ${data.projectName}`
+  let tableOfContents = `\n<details>
+  \n<summary>Table of Contents</summary>
+  \n<ol>
+  \n<li>
+  \n<a href="#about-the-project">About The Project</a>
+  \n<ul>
+  \n<li><a href="#built-with">Built With</a></li>
+  \n</ul>
+  \n</li>`
+
+  if (data.installation) {
+    tableOfContents += `
+    \n<li>
+    \n<a href="#getting-started">Getting Started</a>
+    \n<ul>
+    \n<li><a href="#installation">Installation</a></li>
+    \n</ul>
+    \n</li>`}
+  if (data.usage) {
+    tableOfContents += `\n<li><a href="#usage">Usage</a></li>`
+  }
+
+  tableOfContents += `\n<li><a href="#license">License</a></li>
+  \n<li><a href="#contact">Contact</a></li>
+  \n</ol >
+  \n</details >`
 
 
+  readmeContents += tableOfContents;
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](./assets/screenshot/product.png)
-
-${description}
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+  readmeContents += `
+\n ## About The Project
+\n[![Product Name Screen Shot][product - screenshot]](./assets/screenshot/product.png)
+\n ${data.description}
+\n<p align="right">(<a href="#top">back to top</a>)</p>`
 
 
+  readmeContents += `
+  \n ## Built With`
 
-### Built With
+  if (data.technology1) {
+    readmeContents += `\n* ${data.technology1}`
+  }
+  if (data.technology2) {
+    readmeContents += `\n* ${data.technology2}`
+  }
+  if (data.technology3) {
+    readmeContents += `*\n ${data.technology3}`
+  }
+  if (data.technology4) {
+    readmeContents += `*\n ${data.technology4}`
+  }
 
-* ${technology1}
-* ${technology2}
-* ${technology3}
+  readmeContents += `\n<p align="right">(<a href="#top">back to top</a>)</p>`
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+  if (data.installation) {
+    readmeContents += `\n## Getting Started
+  \nTo get a local copy up and running follow these simple example steps.
+  \n ## Installation
+  \n ${data.installation}
+  \n<p align="right">(<a href="#top">back to top</a>)</p>`
+  }
 
-## Getting Started
-To get a local copy up and running follow these simple example steps.
-
-  
-### Installation
-${installation}
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Usage
-${usage}
-
-Following animation and images show this application's functionality.
-[![Product Screen Shot][product-screenshot]](./assets/screenshot/product.gif)
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-## License
-
-Distributed under ${license} License. See 'LICENSE.txt' for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+  if (data.usage) {
+    readmeContents += `
+\n## Usage
+\n Following animation and images show this application's functionality.
+\n${data.usage}
+\n<p align = "right" > (<a href="#top">back to top</a>)</p>`
+  }
 
 
+  readmeContents += `
+\n## License
+\nDistributed under ${data.license} License.
+\nSee LICENSE.txt for more information.
+\n<p align = "right"> (<a href="#top">back to top</a>)</ >`
 
-## Contact Me
+  readmeContents += `
+\n ## Contact Me
+\n${data.userName} - ${data.email}
 
-${userName} - ${email}
+\nProject Link: [https://github.com/${data.gitHubName}/${data.repoName}](https://github.com/${data.gitHubName}/${data.repoName})
 
-Project Link: [https://github.com/${gitHubName}/${repoName}](https://github.com/${gitHubName}/${repoName})
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-`};
+\n<p align="right">(<a href="#top">back to top</a>)</p>
+`
+  return readmeContents;
+};
 
 
 module.exports = generateMarkdown;

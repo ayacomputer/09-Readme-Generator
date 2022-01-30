@@ -42,12 +42,17 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'What is the fourth technology did you use to build this application?',
+        name: 'technology4',
+    },
+    {
+        type: 'input',
         message: 'How do you install this application?',
         name: 'installation',
     },
     {
         type: 'input',
-        message: 'How do you run this application?',
+        message: 'If you have the screenshot or animation of the product please enter the link.',
         name: 'usage',
     },
     {
