@@ -1,19 +1,19 @@
-//Creating a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) { }
-
-//Creating a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) { }
-
-//Creating a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
-
 //Creating a function to generate markdown for README
-const generateMarkdown = ({ userName, projectName, description, installation, technology1, technology2, technology3, usage, license, gitHubName, email, repoName }) =>
-  `
-    #${projectName}
+const generateMarkdown = (data) => {
+
+  switch (data.license) {
+    case 'MIT':
+      licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+      break;
+    case 'Apache License 2.0': `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+      break;
+    case 'GNU General Public License 2.0': `[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+      break;
+    case 'GNU General Public License 3.0': `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+      break;
+  }
+
+  `#${projectName}
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -92,7 +92,7 @@ ${userName} - ${email}
 Project Link: [https://github.com/${gitHubName}/${repoName}](https://github.com/${gitHubName}/${repoName})
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-`;
+`};
 
 
 module.exports = generateMarkdown;
