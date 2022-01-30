@@ -63,7 +63,7 @@ This application allows the users to create an awesome README.md file by answeri
 
   Following image shows show this application's functionality.
 
- ![This is an image of the product.](./assets/product.png)
+![This is an image of the product.](./assets/product.png)
 
 <p align ="right">(<a href="#top">back to top</a>)</>
 
@@ -73,7 +73,7 @@ To get a local copy up and running follow these simple example steps.
 
  ## Installation~
 
- `git clone git@`
+ `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
 
 <p align="right">(<a href="#top">back to top</a>)</>
 

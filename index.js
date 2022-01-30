@@ -90,7 +90,7 @@ Links: [text](https://website.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 Image or Animation: ![This is an image of the product.](./assets/product.png)
-Highlight: ==very important words==
+Clone: git clone git@github.com:ayacomputer/09-Readme-Generator.git
 -------------------------------------------------------------
 Please answer the questions bellow:
 `
