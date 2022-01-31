@@ -72,8 +72,8 @@ This application allows the users to create an awesome README.md file by answeri
 
 To get a local copy up and running follow these simple example steps.
 
- ## Installation~
-
+ ## Installation
+ The application will be invoked by using the following command:
  `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
 
 <p align="right">(<a href="#top">back to top</a>)</>
