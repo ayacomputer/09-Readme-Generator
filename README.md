@@ -50,7 +50,7 @@
  ![ProductScreen Shot](./assets/product.gif)
 
 
-This application allows the users to create an awesome README.md file by answering simple questions.\nTo be able to upload images onto Readme.md and links, there are some markdown examples shown when the user runs the application. The user can copy and paste when answering the questions on command line.
+This application allows the users to create an awesome README.md file by answering simple questions. To be able to upload images onto Readme.md and links, there are some markdown examples shown when the user runs the application. The user can copy and paste when answering the questions on command line.
 
 <p align = "right">(<a href="#top">back to top</a>)</>
 
@@ -74,7 +74,7 @@ To get a local copy up and running follow these simple example steps.
 
  ## Installation
  The application will be invoked by using the following command:
- 
+
  `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
 
 <p align="right">(<a href="#top">back to top</a>)</>
