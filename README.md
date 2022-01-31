@@ -56,7 +56,7 @@ This application allows the users to create an awesome README.md file by answeri
 
  ## Built With
 * [Node.js](https://nodejs.org/) 
-* [NPM Inquirer] (https://www.npmjs.com/package/inquirer) 
+* [NPM Inquirer](https://www.npmjs.com/package/inquirer) 
 * Javascript 
 <p align = "right"> (<a href="#top">back to top</a>)</>
 
@@ -74,6 +74,7 @@ To get a local copy up and running follow these simple example steps.
 
  ## Installation
  The application will be invoked by using the following command:
+ 
  `git clone git@github.com:ayacomputer/09-Readme-Generator.git`
 
 <p align="right">(<a href="#top">back to top</a>)</>

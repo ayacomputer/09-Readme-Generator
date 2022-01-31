@@ -87,7 +87,7 @@ const generateMarkdown = (data) => {
     readmeContents += `\n## Getting Started
 \nTo get a local copy up and running follow these simple example steps.
 \n ## Installation
-\n The application will be invoked by using the following command:
+\n The application will be invoked by using the following command:\n
 \n ${data.installation}
 \n<p align="right">(<a href="#top">back to top</a>)</>\n`
   }
