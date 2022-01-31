@@ -47,16 +47,17 @@
  ## About The Project
 
 
- ![ProductScreen Shot](./assets/product.png)
+ ![ProductScreen Shot](./assets/product.gif)
 
 
-This application allows the users to create an awesome README.md file by answering simple questions.
+This application allows the users to create an awesome README.md file by answering simple questions.\nTo be able to upload images onto Readme.md and links, there are some markdown examples shown when the user runs the application. The user can copy and paste when answering the questions on command line.
 
 <p align = "right">(<a href="#top">back to top</a>)</>
 
  ## Built With
 * [Node.js](https://nodejs.org/) 
-* npm inquirer 
+* [NPM Inquirer] (https://www.npmjs.com/package/inquirer) 
+* Javascript 
 <p align = "right"> (<a href="#top">back to top</a>)</>
 
 ## Usage
